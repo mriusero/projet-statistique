@@ -1,7 +1,5 @@
-.venv/ 
-
-Sujet/
 
 .DS_Store
+.venv/ 
 
-Partie_theorie/
+
