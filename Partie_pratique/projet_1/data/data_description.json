@@ -1,0 +1,410 @@
+{
+    "title":"fr-en-college-effectifs-niveau-sexe-lv",
+    "type":"object",
+    "oneOf":[
+        {
+    "$ref":"#/definitions/fr-en-college-effectifs-niveau-sexe-lv"
+        }
+    ],
+    "definitions":{
+        "fr-en-college-effectifs-niveau-sexe-lv":{
+            "properties":{
+                "records":{
+                    "type":"array",
+                    "items":{
+                            "$ref":"#/definitions/fr-en-college-effectifs-niveau-sexe-lv_records"
+                        }
+                    }
+                }
+            },
+    "fr-en-college-effectifs-niveau-sexe-lv_records":{
+    "properties":{
+    "fields":{
+    "type":"object",
+    "properties":{
+    "rentree_scolaire":{
+    "type":"string",
+    "title":"Rentrée scolaire",
+    "description":"Année de rentrée scolaire sous la forme aaaa (par exemple : 2019 pour l'année scolaire 2019-2020)"
+    },
+    "region_academique":{
+    "type":"string",
+    "title":"Région",
+    "description":"Nom de la région d'implantation de l'établissement scolaire"
+    },
+    "academie":{
+    "type":"string",
+    "title":"Académie",
+    "description":"Nom de l'académie à laquelle appartient l'établissement scolaire"
+    },
+    "departement":{
+    "type":"string",
+    "title":"Département",
+    "description":"Nom du département d'implantation de l'établissement scolaire"
+    },
+    "commune":{
+    "type":"string",
+    "title":"Commune",
+    "description":"Nom de la commune d'implantation de l'établissement scolaire"
+    },
+    "numero_college":{
+    "type":"string",
+    "title":"Numéro du collège",
+    "description":"Identifiant de l'établissement scolaire (UAI)"
+    },
+    "denomination_principale":{
+    "type":"string",
+    "title":"Dénomination principale",
+    "description":"Dénomination de l'établissement scolaire"
+    },
+    "patronyme":{
+    "type":"string",
+    "title":"Patronyme",
+    "description":"Nom de l'établissement scolaire"
+    },
+    "secteur":{
+    "type":"string",
+    "title":"Secteur",
+    "description":"Secteur d'enseignement de l'établissement scolaire : public / privé"
+    },
+    "rep":{
+    "type":"string",
+    "title":"REP",
+    "description":"Variable valant '1' si l'établissement appartient à un réseau d'éducation prioritaire (REP) et '0' sinon."
+    },
+    "rep_plus":{
+    "type":"string",
+    "title":"REP +",
+    "description":"Variable valant '1' si l'établissement appartient à un réseau d'éducation prioritaire renforcé (REP+) et '0' sinon."
+    },
+    "nombre_eleves_total":{
+    "type":"integer",
+    "title":"Nombre d'élèves total",
+    "description":"Effectifs totaux du collège"
+    },
+    "nombre_eleves_total_hors_segpa_hors_ulis":{
+    "type":"integer",
+    "title":"Nombre d'élèves total hors Segpa hors ULIS",
+    "description":"Effectifs des élèves du collège hors SEGPA et hors ULIS"
+    },
+    "nombre_eleves_segpa":{
+    "type":"integer",
+    "title":"Nombre d'élèves total Segpa",
+    "description":"Effectifs des élèves en section d'enseignement général et professionnel adapté (SEGPA)"
+    },
+    "nombre_eleves_ulis":{
+    "type":"integer",
+    "title":"Nombre d'élèves total ULIS",
+    "description":"Effectifs des élèves scolarisés dans une unité localisée pour l'inclusion scolaire (ULIS)"
+    },
+    "6eme_total":{
+    "type":"integer",
+    "title":"6èmes total",
+    "description":"Effectifs des élèves en classe de sixième"
+    },
+    "6eme_hors_segpa_hors_ulis":{
+    "type":"integer",
+    "title":"6èmes hors Segpa hors ULIS",
+    "description":"Effectifs des élèves de sixième hors SEGPA et hors ULIS"
+    },
+    "6eme_segpa":{
+    "type":"integer",
+    "title":"6èmes Segpa",
+    "description":"Effectifs des élèves de sixième en section d'enseignement général et professionnel adapté (SEGPA)"
+    },
+    "6eme_ulis":{
+    "type":"integer",
+    "title":"6èmes ULIS",
+    "description":"Effectifs des élèves de sixième scolarisés dans une unité localisée pour l'inclusion scolaire (ULIS)"
+    },
+    "6eme_filles":{
+    "type":"integer",
+    "title":"6èmes filles",
+    "description":"Effectif des filles en classe de sixième (SEGPA et ULIS inclus)"
+    },
+    "6emes_garcons":{
+    "type":"integer",
+    "title":"6èmes garçons",
+    "description":"Effectif des garçons en classe de sixième (SEGPA et ULIS inclus)"
+    },
+    "6eme_lv1_allemand":{
+    "type":"integer",
+    "title":"6èmes LV1 allemand",
+    "description":"Effectif des élèves de sixième en ALLEMAND Langue vivante 1 (LV1)"
+    },
+    "6eme_lv1_anglais":{
+    "type":"integer",
+    "title":"6èmes LV1 anglais",
+    "description":"Effectif des élèves de sixième en ANGLAIS Langue vivante 1 (LV1)"
+    },
+    "6eme_lv1_espagnol":{
+    "type":"integer",
+    "title":"6èmes LV1 espagnol",
+    "description":"Effectif des élèves de sixième en ESPAGNOL Langue vivante 1 (LV1)"
+    },
+    "6eme_lv1_autres":{
+    "type":"integer",
+    "title":"6èmes LV1 autres langues",
+    "description":"Effectif des élèves de sixième en langue vivante (LV1) autre que l'allemand, l'anglais ou l'espagnol"
+    },
+    "6eme_lv2_allemand":{
+    "type":"integer",
+    "title":"6èmes LV2 allemand",
+    "description":"Effectif des élèves de sixième en ALLEMAND Langue vivante 2 (LV2)"
+    },
+    "6eme_lv2_anglais":{
+    "type":"integer",
+    "title":"6èmes LV2 anglais",
+    "description":"Effectif des élèves de sixième en ANGLAIS Langue vivante 2 (LV2)"
+    },
+    "6eme_lv2_espagnol":{
+    "type":"integer",
+    "title":"6èmes LV2 espagnol",
+    "description":"Effectif des élèves de sixième en ESPAGNOL Langue vivante 2 (LV2)"
+    },
+    "6eme_lv2_italien":{
+    "type":"integer",
+    "title":"6èmes LV2 italien",
+    "description":"Effectif des élèves de sixième en ITALIEN Langue vivante 2 (LV2)"
+    },
+    "6eme_lv2_autres":{
+    "type":"integer",
+    "title":"6ème LV2 autres langues",
+    "description":"Effectif des élèves de sixième en langue vivante 2 (LV2) autre que l'allemand, l'anglais, l'espagnol ou l'italien"
+    },
+    "5eme_total":{
+    "type":"integer",
+    "title":"5èmes total",
+    "description":"Effectifs des élèves en classe de cinquième"
+    },
+    "5eme_hors_segpa_hors_ulis":{
+    "type":"integer",
+    "title":"5èmes hors Segpa hors ULIS",
+    "description":"Effectifs des élèves de cinquième hors SEGPA et hors ULIS"
+    },
+    "5eme_segpa":{
+    "type":"integer",
+    "title":"5èmes Segpa",
+    "description":"Effectifs des élèves de cinquième en section d'enseignement général et professionnel adapté (SEGPA)"
+    },
+    "5eme_ulis":{
+    "type":"integer",
+    "title":"5èmes ULIS",
+    "description":"Effectifs des élèves de cinquième scolarisés dans une unité localisée pour l'inclusion scolaire (ULIS)"
+    },
+    "5eme_filles":{
+    "type":"integer",
+    "title":"5èmes filles",
+    "description":"Effectif des filles en classe de cinquième (SEGPA et ULIS inclus)"
+    },
+    "5emes_garcons":{
+    "type":"integer",
+    "title":"5èmes garçons",
+    "description":"Effectif des garçons en classe de cinquième (SEGPA et ULIS inclus)"
+    },
+    "5eme_lv1_allemand":{
+    "type":"integer",
+    "title":"5èmes LV1 allemand",
+    "description":"Effectif des élèves de cinquième en ALLEMAND Langue vivante 1 (LV1)"
+    },
+    "5eme_lv1_anglais":{
+    "type":"integer",
+    "title":"5èmes LV1 anglais",
+    "description":"Effectif des élèves de cinquième en ANGLAIS Langue vivante 1 (LV1)"
+    },
+    "5eme_lv1_espagnol":{
+    "type":"integer",
+    "title":"5èmes LV1 espagnol",
+    "description":"Effectif des élèves de cinquième en ESPAGNOL Langue vivante 1 (LV1)"
+    },
+    "5eme_lv1_autres":{
+    "type":"integer",
+    "title":"5èmes LV1 autres langues",
+    "description":"Effectif des élèves de cinquième en langue vivante (LV1) autre que l'allemand, l'anglais ou l'espagnol"
+    },
+    "5eme_lv2_allemand":{
+    "type":"integer",
+    "title":"5èmes LV2 allemand",
+    "description":"Effectif des élèves de cinquième en ALLEMAND Langue vivante 2 (LV2)"
+    },
+    "5eme_lv2_anglais":{
+    "type":"integer",
+    "title":"5èmes LV2 anglais",
+    "description":"Effectif des élèves de cinquième en ANGLAIS Langue vivante 2 (LV2)"
+    },
+    "5eme_lv2_espagnol":{
+    "type":"integer",
+    "title":"5èmes LV2 espagnol",
+    "description":"Effectif des élèves de cinquième en ESPAGNOL Langue vivante 2 (LV2)"
+    },
+    "5eme_lv2_italien":{
+    "type":"integer",
+    "title":"5èmes LV2 italien",
+    "description":"Effectif des élèves de cinquième en ITALIEN Langue vivante 2 (LV2)"
+    },
+    "5eme_lv2_autres":{
+    "type":"integer",
+    "title":"5èmes LV2 autres langues",
+    "description":"Effectif des élèves de cinquième en langue vivante 2 (LV2) autre que l'allemand, l'anglais, l'espagnol ou l'italien"
+    },
+    "4eme_total":{
+    "type":"integer",
+    "title":"4èmes total",
+    "description":"Effectifs des élèves en classe de quatrième"
+    },
+    "4eme_hors_segpa_hors_ulis":{
+    "type":"integer",
+    "title":"4èmes hors Segpa hors ULIS",
+    "description":"Effectifs des élèves de quatrième hors SEGPA et hors ULIS"
+    },
+    "4eme_segpa":{
+    "type":"integer",
+    "title":"4èmes Segpa",
+    "description":"Effectifs des élèves de quatrième en section d'enseignement général et professionnel adapté (SEGPA)"
+    },
+    "4eme_ulis":{
+    "type":"integer",
+    "title":"4èmes ULIS",
+    "description":"Effectifs des élèves de quatrième scolarisés dans une unité localisée pour l'inclusion scolaire (ULIS)"
+    },
+    "4eme_filles":{
+    "type":"integer",
+    "title":"4èmes filles",
+    "description":"Effectif des filles en classe de quatrième (SEGPA et ULIS inclus)"
+    },
+    "4emes_garcons":{
+    "type":"integer",
+    "title":"4èmes garçons",
+    "description":"Effectif des garçons en classe de quatrième (SEGPA et ULIS inclus)"
+    },
+    "4eme_lv1_allemand":{
+    "type":"integer",
+    "title":"4èmes LV1 allemand",
+    "description":"Effectif des élèves de quatrième en ALLEMAND Langue vivante 1 (LV1)"
+    },
+    "4eme_lv1_anglais":{
+    "type":"integer",
+    "title":"4èmes LV1 anglais",
+    "description":"Effectif des élèves de quatrième en ANGLAIS Langue vivante 1 (LV1)"
+    },
+    "4eme_lv1_espagnol":{
+    "type":"integer",
+    "title":"4èmes LV1 espagnol",
+    "description":"Effectif des élèves de cinquième en ESPAGNOL Langue vivante 1 (LV1)"
+    },
+    "4eme_lv1_autres":{
+    "type":"integer",
+    "title":"4èmes LV1 autres langues",
+    "description":"Effectif des élèves de quatrième en langue vivante (LV1) autre que l'allemand, l'anglais ou l'espagnol"
+    },
+    "4eme_lv2_allemand":{
+    "type":"integer",
+    "title":"4èmes LV2 allemand",
+    "description":"Effectif des élèves de quatrième en ALLEMAND Langue vivante 2 (LV2)"
+    },
+    "4eme_lv2_anglais":{
+    "type":"integer",
+    "title":"4èmes LV2 anglais",
+    "description":"Effectif des élèves de quatrième en ANGLAIS Langue vivante 2 (LV2)"
+    },
+    "4eme_lv2_espagnol":{
+    "type":"integer",
+    "title":"4èmes LV2 espagnol",
+    "description":"Effectif des élèves de quatrième en ESPAGNOL Langue vivante 2 (LV2)"
+    },
+    "4eme_lv2_italien":{
+    "type":"integer",
+    "title":"4èmes LV2 italien",
+    "description":"Effectif des élèves de quatrième en ITALIEN Langue vivante 2 (LV2)"
+    },
+    "4eme_lv2_autres":{
+    "type":"integer",
+    "title":"4èmes LV2 autres langues",
+    "description":"Effectif des élèves de quatrième en langue vivante 2 (LV2) autre que l'allemand, l'anglais, l'espagnol ou l'italien"
+    },
+    "3eme_total":{
+    "type":"integer",
+    "title":"3èmes total",
+    "description":"Effectifs des élèves en classe de troisième"
+    },
+    "3eme_hors_segpa_hors_ulis":{
+    "type":"integer",
+    "title":"3èmes hors Segpa hors ULIS",
+    "description":"Effectifs des élèves de troisième hors SEGPA et hors ULIS"
+    },
+    "3eme_segpa":{
+    "type":"integer",
+    "title":"3èmes Segpa",
+    "description":"Effectifs des élèves de troisième en section d'enseignement général et professionnel adapté (SEGPA)"
+    },
+    "3eme_ulis":{
+    "type":"integer",
+    "title":"3èmes ULIS",
+    "description":"Effectifs des élèves de troisième scolarisés dans une unité localisée pour l'inclusion scolaire (ULIS)"
+    },
+    "3eme_filles":{
+    "type":"integer",
+    "title":"3èmes filles",
+    "description":"Effectif des filles en classe de troisième (SEGPA et ULIS inclus)"
+    },
+    "3emes_garcons":{
+    "type":"integer",
+    "title":"3èmes garçons",
+    "description":"Effectif des garçons en classe de troisième (SEGPA et ULIS inclus)"
+    },
+    "3eme_lv1_allemand":{
+    "type":"integer",
+    "title":"3èmes LV1 allemand",
+    "description":"Effectif des élèves de troisième en ALLEMAND Langue vivante 1 (LV1)"
+    },
+    "3eme_lv1_anglais":{
+    "type":"integer",
+    "title":"3èmes LV1 anglais",
+    "description":"Effectif des élèves de troisième en ANGLAIS Langue vivante 1 (LV1)"
+    },
+    "3eme_lv1_espagnol":{
+    "type":"integer",
+    "title":"3èmes LV1 espagnol",
+    "description":"Effectif des élèves de troisième en ESPAGNOL Langue vivante 1 (LV1)"
+    },
+    "3eme_lv1_autres":{
+    "type":"integer",
+    "title":"3èmes LV1 autres langues",
+    "description":"Effectif des élèves de troisième en langue vivante (LV1) autre que l'allemand, l'anglais ou l'espagnol"
+    },
+    "3eme_lv2_allemand":{
+    "type":"integer",
+    "title":"3èmes LV2 allemand",
+    "description":"Effectif des élèves de troisième en ALLEMAND Langue vivante 2 (LV2)"
+    },
+    "3eme_lv2_anglais":{
+    "type":"integer",
+    "title":"3èmes LV2 anglais",
+    "description":"Effectif des élèves de troisième en ANGLAIS Langue vivante 2 (LV2)"
+    },
+    "3eme_lv2_espagnol":{
+    "type":"integer",
+    "title":"3èmes LV2 espagnol",
+    "description":"Effectif des élèves de troisième en ESPAGNOL Langue vivante 2 (LV2)"
+    },
+    "3eme_lv2_italien":{
+    "type":"integer",
+    "title":"3èmes LV2 italien",
+    "description":"Effectif des élèves de troisième en ITALIEN Langue vivante 2 (LV2)"
+    },
+    "3eme_lv2_autres":{
+    "type":"integer",
+    "title":"3èmes LV2 autres langues",
+    "description":"Effectif des élèves de troisième en langue vivante 2 (LV2) autre que l'allemand, l'anglais, l'espagnol ou l'italien"
+    },
+    "code_postal":{
+    "type":"string",
+    "title":"Code postal",
+    "description":"Code postal, code postal référencé dans le répertoire des établissements"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
