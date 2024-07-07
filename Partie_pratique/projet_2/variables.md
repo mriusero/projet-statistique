@@ -184,10 +184,47 @@ NPERS: Nombre de personnes du ménage
 NACTIFS: Nombre d'actifs dans le ménage
 NBENFM3, NBENF3A17, NBENF18P: Nombre d'enfants dans le ménage
 
-
 * Variables potentiellement collinéaires:
 * ANAIS et AGE (si inclus) pourraient être fortement corrélées.
 * MER1E et PER1E peuvent être corrélées si les deux parents sont présents ensemble.
 * REVENUS et DEPENSES pourraient être corrélées.
 * NBENFM3, NBENF3A17, NBENF18P peuvent être corrélées entre elles.
 * REVENUS et COEFFUC pourraient être corrélées.
+
+------------------------------------------------------------------------------------------
+
+## 3nd tri 
+
+### état civil et familial :
+ANAIS: Année de naissance
+ETAMATRI: État matrimonial légal
+PACS: Existence d’un PACS
+MER1E: Présence de la mère dans le logement
+PER1E: Présence du père dans le logement
+
+### situation travail :
+SITUA: Situation principale vis-à-vis du travail
+CJSITUA: Situation pro du conjoint 
+RABS: Raison de non travail
+STATUTEXT: Statut (extension FP)
+METIER: Métier (potentiellement lié à l'activité professionnelle)
+
+SSECH: Secteur d'activité ----> Exclue pour multicolinéaritée avec STATUTEXT
+
+### conditions de vie :
+REVMENUC: Revenu mensuel moyen par unité de consommation
+AIDFAM: Aides familial ou conjoint collaborateur 
+
+### Variables liées aux caractéristiques du logement et familial :
+TYPOLOG: Type d’occupation du logement
+TYPMEN15: Type de ménage au sens du TCM
+NPERS: Nombre de personnes du ménage
+NACTIFS: Nombre d'actifs dans le ménage
+
+NBENFM3, NBENF3A17, NBENF18P: Nombre d'enfants dans le ménage ----> Exclue pour multicolinéaritée avec NPERS
+
+#################
+
+numerical values: ['ANAIS', 'REVMENUC', 'NPERS', 'NACTIFS']
+
+categorical_values: ['ETAMATRI', 'PACS', 'MER1E', 'PER1E', 'SITUA', 'CJSITUA', 'RABS', 'STATUTEXT', 'METIER', 'AIDFAM', 'TYPOLOG', 'TYPMEN15']
