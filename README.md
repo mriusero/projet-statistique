@@ -1,85 +1,103 @@
-# projet-statistique
+# Statistical Analysis
+
+This repository contains two distinct statistical analysis projects. One investigates **dropout rates in schools**, and the other explores the **determinants of women’s principal resource provider status** in households. Both projects apply a range of statistical techniques to analyze and visualize data, providing valuable insights into educational and social dynamics.
+
+## **1. Statistical Analysis of Dropout Rates in Schools**
+
+### **Project Overview**
+This analysis examines dropout rates in schools, focusing on various factors such as gender, school sector (public vs private), and region. Several statistical tests are conducted to identify significant relationships within the data, complemented by visualizations to support the findings.
+
+### **Objective**
+To identify the main factors contributing to variations in dropout rates across different regions, sectors, and genders.
+
+### **Key Steps in the Analysis**
+1. **Kruskal-Wallis Test**:  
+   - Compares dropout rates across multiple regions.  
+   - A non-parametric test to evaluate differences among more than two independent groups.
+
+2. **Dunn’s Post-Hoc Test**:  
+   - Applied if Kruskal-Wallis reveals significant differences to pinpoint specific group differences.
+
+3. **Mann-Whitney U Test**:  
+   - Compares dropout rates between public and private schools, for both boys and girls.
+
+4. **Median Comparison**:  
+   - Compares the medians of dropout rates across different groups (e.g., public vs private, boys vs girls).
+
+5. **Correlation Analysis**:  
+   - Pearson and Spearman correlations are used to explore relationships between school size and dropout rates.
+
+6. **Visualizations**:  
+   - Various plots (e.g., boxplots, scatter plots) visualize the distribution of dropout rates by gender, sector, and region.
+
+### **Libraries Used**
+- `pandas`, `matplotlib`, `seaborn`, `scipy`, `statsmodels`
+
+### **Steps for Running the Analysis**
+1. **Data Preparation**: Clean and format the dataset, handling missing values.
+2. **Statistical Tests**: Apply Kruskal-Wallis, Mann-Whitney U, and Dunn’s tests, and compare medians.
+3. **Visualizations**: Generate boxplots and scatter plots.
+4. **Results Interpretation**: Interpret p-values and test outcomes to draw conclusions.
+
+### **Code Structure**
+- **Statistical Tests Section**: Implements Kruskal-Wallis, Mann-Whitney U, and Dunn’s tests.
+- **Data Visualization Section**: Generates graphical representations of data.
+- **Data Preparation Section**: Includes data pre-processing steps.
+
+### **Important Notes**
+- Non-parametric tests are used due to unknown distribution in the data.
+- A significance level of 0.05 is applied to all statistical tests.
+
+### **Conclusion**
+This analysis identifies key factors influencing dropout rates across regions, school sectors, and genders, providing valuable insights for policy decisions and targeted interventions.
 
 ---
 
-# **Statistical Analysis of Dropout Rates in Schools**
+## **2. Determinants of Women’s Principal Resource Provider Status**
 
-This project performs various statistical analyses and visualizations on dropout rates in schools based on the dataset provided. It includes tests like Kruskal-Wallis, Dunn’s test, Mann-Whitney U test, and comparisons of medians, along with relevant visualizations of the data by different factors like gender, sector (public vs private), and region.
+### **Project Overview**
+This analysis explores factors influencing whether a woman is the primary breadwinner in her household, using binary logistic regression. The dataset includes individuals living in couples, with various potential influencing factors.
 
-## **Project Overview**
+### **Objective**
+To identify and assess the key factors that predict whether a woman is the principal earner in a household.
 
-The goal of this analysis is to explore dropout rates across different variables, including gender, school sector (public vs private), and region. Various statistical methods are employed to test hypotheses, including tests for significant differences in dropout rates, correlations, and visual representation of the data.
+### **Libraries Used**
+- `pandas`, `numpy`, `matplotlib`, `seaborn`, `statsmodels`, `scipy`, `sklearn`
 
-### **Key Steps in the Analysis:**
+### **Steps Taken**
+1. **Data Loading & Initial Exploration**:  
+   - Load the dataset from `.sas7bdat` format and filter data to include individuals in couples.  
+   - Define the target variable `FPA` (Female Principal Earner) based on household conditions.
 
-1. **Kruskal-Wallis Test**
-   - Used to compare the dropout rates across multiple regions.
-   - A non-parametric test for comparing more than two independent groups.
+2. **Data Cleaning**:  
+   - Handle missing values by replacing them with zeros.  
+   - Focus on relevant variables for analysis.
 
-2. **Dunn's Post-Hoc Test**
-   - If the Kruskal-Wallis test reveals significant differences, Dunn's test is applied to identify which specific groups differ.
+3. **Exploratory Data Analysis (EDA)**:  
+   - Generate plots (histograms, Q-Q plots) for continuous variables.  
+   - Create correlation matrices and contingency tables for categorical variables.
 
-3. **Mann-Whitney U Test**
-   - Used to compare dropout rates between public and private schools for both boys and girls.
-   - Non-parametric test used when comparing two independent groups.
+4. **Statistical Testing**:  
+   - Perform a t-test to analyze significant differences in means based on the target variable (`FPA`).
 
-4. **Median Comparison**
-   - Median dropout rates are calculated and compared for different groups (public vs private schools, boys vs girls).
-   - Differences in medians are explored to understand if there are notable variations.
+5. **Feature Selection**:  
+   - Identify significant predictors (e.g., `NPERS`, `NACTIFS`, `REVMENUC`) for further modeling.
 
-5. **Correlation Analysis**
-   - Pearson and Spearman correlations are computed to explore relationships between school size (total number of students) and dropout rates for both boys and girls.
+6. **Logistic Regression Model**:  
+   - Train a logistic regression model using the selected features.  
+   - Evaluate model performance using precision, recall, and ROC-AUC metrics.
 
-6. **Visualizations**
-   - Various plots, including boxplots and scatter plots, are created to visualize the distribution of dropout rates by gender, sector, and region.
+### **Key Insights**
+- Significant predictors include the number of people in the household (`NPERS`), the number of active workers (`NACTIFS`), and household income (`REVMENUC`).
+- Correlation analysis reveals relationships between household size, income, and the likelihood of a woman being the primary earner.
 
-## **Libraries Used:**
-
-- `pandas` for data manipulation
-- `matplotlib` and `seaborn` for visualizations
-- `scipy` for statistical tests
-- `statsmodels` for additional statistical methods (e.g., Kruskal-Wallis and Dunn tests)
-
-## **Steps for Running the Analysis:**
-
-1. **Data Preparation:**
-   - Ensure that the dataset is cleaned and formatted properly (e.g., handling missing values).
-
-2. **Statistical Tests:**
-   - Apply the Kruskal-Wallis test for regional comparisons of dropout rates.
-   - Perform Dunn’s test if Kruskal-Wallis results are significant.
-   - Use the Mann-Whitney U test to compare dropout rates between public and private schools.
-   - Compare medians to investigate differences in dropout rates between different groups.
-
-3. **Visualizations:**
-   - Generate boxplots to show the distribution of dropout rates by region and gender.
-   - Create scatter plots to explore correlations between school size and dropout rates.
-
-4. **Results Interpretation:**
-   - Interpret the results from the statistical tests and visualize the data accordingly.
-   - Based on p-values, draw conclusions about whether significant differences exist in dropout rates between groups.
-
-## **Code Structure:**
-
-- **Statistical Tests Section:**
-  - Kruskal-Wallis, Mann-Whitney U, and Dunn’s tests are implemented here to compare dropout rates across different groups.
-
-- **Data Visualization Section:**
-  - Plots (scatter, boxplots) are generated to represent the data graphically.
-
-- **Data Preparation Section:**
-  - Data is pre-processed (e.g., melting the dataframe for easier plotting).
-
-## **Important Notes:**
-
-- **Assumptions:** 
-  - The non-parametric tests assume that the data does not follow a normal distribution. These tests are suitable for data with unknown distribution or ordinal data.
-  
-- **Significance Level:**
-  - A p-value threshold of 0.05 is used for statistical significance.
-
-## **Conclusion:**
-This analysis helps identify significant differences in dropout rates across different regions, sectors, and genders. It provides insights into where interventions might be needed and whether the gender or type of school (public vs private) plays a significant role in dropout rates.
+### **Remaining Work**
+- Refine the logistic regression model by exploring additional features and handling multicollinearity.
+- Implement cross-validation and explore feature interactions for deeper insights.
 
 ---
 
+## **General Notes**
+- **Data Formats**: Each project uses different dataset formats. The first project uses CSV, while the second uses a `.sas7bdat` file.
+- **Assumptions**: Non-parametric tests are used for non-normally distributed data.
+- **Significance Level**: A significance threshold of 0.05 is applied to all statistical tests in both projects.
